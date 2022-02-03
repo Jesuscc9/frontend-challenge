@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HeroContainer = styled.section`
-  padding: 4rem;
+  padding: var(--body-padding);
   background-color: var(--main-bg-color);
   display: flex;
   justify-content: space-between;

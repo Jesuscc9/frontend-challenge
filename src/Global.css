@@ -2,6 +2,7 @@
 
 :root {
   --main-bg-color: #0b1113;
+  --body-padding: 6rem;
 }
 
 * {
@@ -12,12 +13,13 @@
 
 h1,
 h2,
+h3,
 p {
   font-family: 'Roboto';
 }
 
 p {
-  font-weight: 300;
+  font-weight: normal;
   font-size: 16px;
   line-height: 24px;
 }
@@ -25,7 +27,7 @@ p {
 h1 {
   font-size: 68px;
   line-height: 80px;
-  font-weight: 9000;
+  font-weight: 900;
 }
 
 h2 {
@@ -44,7 +46,7 @@ button {
   cursor: pointer;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 486px) {
   h1 {
     font-size: 48px;
     line-height: 60px;
@@ -53,5 +55,24 @@ button {
   h3 {
     font-size: 18px;
     line-height: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 1280px) {
+}
+
+@media (max-width: 1536px) {
+  :root {
+    --main-bg-color: #0b1113;
+    --body-padding: 4rem;
   }
 }

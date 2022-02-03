@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-  margin-top: 4rem;
-  padding: 3rem;
+  margin-top: 3rem;
+  padding: var(--body-padding);
   display: flex;
   flex-direction: column;
-  row-gap: 6rem;
+  row-gap: 4.2rem;
 
   h1 {
     text-align: center;

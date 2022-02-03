@@ -15,7 +15,7 @@ export const Nav = styled.nav`
   .menu {
     width: 20px;
     height: 20px;
-    background-color: #000;
+    background-color: #0B1113;;
     border-radius: 50%;
   }
 `

@@ -7,7 +7,7 @@ export const CtaStyles = createGlobalStyle`
   }
 
   .cta__info {
-    padding: 4rem;
+    padding: calc(var(--body-padding) + 1.4rem) var(--body-padding);
     background-color: #495664;
     display: flex;
     flex-direction: column;

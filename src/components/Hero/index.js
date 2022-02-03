@@ -60,31 +60,48 @@ const Modal = ({ show, onCloseModal }) => {
           <ModalStyles />
           <div className='overlay' onClick={onCloseModal} />
           <div className='modal'>
-            <div className='modalSidemenu'>
-              <div className='item'>
-                <img
-                  src='https://cdn.shopify.com/s/files/1/0311/4398/5197/collections/AOT-Location-Header-Banner_8135451a-0507-4cc5-a2e4-ea40a5618661_1800x.jpg?v=1586193127'
-                  alt=''
-                />
-                <div className='itemInfo'>
-                  <h3>Tea Pack2</h3>
-                  <p>4.4/5 *</p>
-                </div>
+            <div className='modalContent'>
+              <div className='modalSidemenu'>
+                {[1, 2, 3, 4].map((e) => (
+                  <div className='item' key={e}>
+                    <div
+                      className='image'
+                      style={{
+                        backgroundImage:
+                          'url(https://cdn.shopify.com/s/files/1/0311/4398/5197/collections/AOT-Location-Header-Banner_8135451a-0507-4cc5-a2e4-ea40a5618661_1800x.jpg?v=1586193127)'
+                      }}
+                    />
+                    <div className='itemInfo'>
+                      <h3>Tea Pack2</h3>
+                      <p>4.4/5 *</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            </div>
-            <div className='modalMainContent'>
-              {/* <button className='close' onClick={onCloseModal}>
+              <div className='modalMainContent'>
+                {/* <button className='close' onClick={onCloseModal}>
                 CERRAR
               </button> */}
 
-              <div className='modalHeader'>
-                <img
-                  src='https://cdn.shopify.com/s/files/1/0311/4398/5197/collections/AOT-Location-Header-Banner_8135451a-0507-4cc5-a2e4-ea40a5618661_1800x.jpg?v=1586193127'
-                  alt=''
-                />
-              </div>
+                <div className='modalHeader'>
+                  <div
+                    className='image'
+                    style={{
+                      backgroundImage:
+                        'url(https://cdn.shopify.com/s/files/1/0311/4398/5197/collections/AOT-Location-Header-Banner_8135451a-0507-4cc5-a2e4-ea40a5618661_1800x.jpg?v=1586193127)'
+                    }}
+                  />
+                </div>
 
-              <h1>Este es el titulo</h1>
+                <div className='modalBody'>
+                  <h1>Tea Pack 1</h1>
+                  <p>
+                    Experience the world of black teas in one sample set. This
+                    is a great way to learn the wide range of flavors offered by
+                    black tea.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </>

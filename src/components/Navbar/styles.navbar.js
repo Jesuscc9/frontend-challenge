@@ -2,13 +2,14 @@ import styled from 'styled-components'
 
 export const Nav = styled.nav`
   width: 100%;
-  border: 1px solid;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem;
 
-  h1 {
-    font-weight: 100
+  p {
+    font-weight: 100;
+    font-size: 24px;
   }
 
   .menu {

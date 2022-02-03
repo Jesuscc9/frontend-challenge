@@ -1,6 +1,16 @@
 import React from 'react'
-import { Hero } from '../../components/Hero'
+import { Hero, Section, Cta } from '../../components/'
+import { HomeStyles } from './styles.home'
 
 export const Home = () => {
-  return <Hero />
+  return (
+    <>
+      <HomeStyles />
+      <div className='mainContainer'>
+        <Hero />
+        <Section />
+        <Cta />
+      </div>
+    </>
+  )
 }

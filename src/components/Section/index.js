@@ -1,34 +1,38 @@
-import { Section as SectionComponent, ItemsContainer } from './styles.section'
+import { SectionStyles } from './styles.section'
 import { items } from '../../data/SectionsData'
 import { useState } from 'react'
 import ArrowIcon from '../../assets/icons/arrow.svg'
 
-export const Section = () => {
-  return (
-    <SectionComponent>
-      <h1>Why Us</h1>
-      <ItemsContainer>
+export const Section = () => (
+  <>
+    <SectionStyles />
+    <section className='section'>
+      <h1 className='section__title'>Why Us</h1>
+      <div className='section__items-container'>
         {items.map((e, i) => (
-          <Item data={e} key={i} />
+          <SectionItem data={e} key={i} />
         ))}
-      </ItemsContainer>
-    </SectionComponent>
-  )
-}
+      </div>
+    </section>
+  </>
+)
 
-const Item = ({ data }) => {
+const SectionItem = ({ data }) => {
   const [showDescription, setShowDescription] = useState(data.id === 2 || false)
 
   const handleClick = () => setShowDescription(!showDescription)
 
   return (
-    <article className='item'>
-      <div className='icon' />
-      <div onClick={handleClick} className='item__header'>
-        <h2>{data.title}</h2>
-        <img src={ArrowIcon} className={`arrow ${showDescription && 'arrow__rotated'}`} />
-      </div>
-      {(showDescription) && <p>{data.description}</p>}
-    </article>
+    <>
+      <SectionStyles />
+      <article className='item'>
+        <div className='item__icon' />
+        <div onClick={handleClick} className='item__header'>
+          <h2 className='item__title'>{data.title}</h2>
+          <img src={ArrowIcon} className={`item__arrow ${showDescription && 'item__arrow--rotated'}`} />
+        </div>
+        {(showDescription) && <p className='item__description'>{data.description}</p>}
+      </article>
+    </>
   )
 }

@@ -2,7 +2,7 @@
 
 :root {
   --main-bg-color: #0b1113;
-  --body-padding: 6rem;
+  --body-padding: 7rem;
 }
 
 * {
@@ -62,9 +62,15 @@ button {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --body-padding: 2rem;
+  }
 }
 
 @media (max-width: 1024px) {
+  :root {
+    --body-padding: 3rem;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -72,7 +78,6 @@ button {
 
 @media (max-width: 1536px) {
   :root {
-    --main-bg-color: #0b1113;
     --body-padding: 4rem;
   }
 }

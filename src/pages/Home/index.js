@@ -6,7 +6,7 @@ export const Home = () => {
   return (
     <>
       <HomeStyles />
-      <div className='mainContainer'>
+      <div className='MainContainer'>
         <Hero />
         <Section />
         <Cta />

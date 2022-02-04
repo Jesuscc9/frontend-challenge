@@ -7,17 +7,17 @@ export const Cta = () => {
       <CtaStyles />
       <section className='cta'>
         <div className='cta__info'>
-          <h1>SIGN UP</h1>
-          <p>
+          <h1 className='cta__title'>SIGN UP</h1>
+          <p className='cta__description'>
             Get the best tea experience you’ll ever taste right at your door
             each month
           </p>
-          <button>
-            <p>Sign Up</p>
+          <button className='cta__button'>
+            <p>Sign up</p>
           </button>
         </div>
-        <div className='cta__image'>
-          <img src={TeaDesktop} alt='Tea image in TeaShop' />
+        <div className='cta__image-container'>
+          <img src={TeaDesktop} alt='Tea image in TeaShop' className='cta__image' />
         </div>
       </section>
     </>

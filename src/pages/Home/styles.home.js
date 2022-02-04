@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const HomeStyles = createGlobalStyle`
-  .mainContainer {
+  .MainContainer {
     display: flex;
     flex-direction: column;
-    row-gap: 4rem;
+    row-gap: 3.6rem;
   }
 `

@@ -1,18 +1,21 @@
-import styled from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
-export const Nav = styled.nav`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+export const NavStyles = createGlobalStyle`
 
-  p {
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 1rem;
+  }
+
+  .navbar__title {
     font-weight: 100;
     font-size: 24px;
   }
 
-  .menu {
+  .navbar__icon {
     width: 20px;
     height: 20px;
     background-color: #0B1113;;

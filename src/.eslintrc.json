@@ -1,0 +1,9 @@
+{
+  "root": true,
+  "extends": ["eslint:recommended"],
+  "rules": {
+    "camelcase": 0,
+    "multiline-ternary": 0,
+    "no-unused-vars": 1
+  }
+}

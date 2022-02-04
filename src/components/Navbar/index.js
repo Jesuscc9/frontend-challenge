@@ -1,10 +1,13 @@
-import { Nav } from './styles.navbar'
+import { NavStyles } from './styles.navbar'
 
 export const Navbar = () => {
   return (
-    <Nav>
-      <p>TEESH</p>
-      <div className='menu' />
-    </Nav>
+    <>
+      <NavStyles />
+      <nav className='navbar'>
+        <p className='navbar__title'>TEESH</p>
+        <div className='navbar__icon'></div>
+      </nav>
+    </>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Hero, Section, Cta } from '../../components/'
+import { Hero, Section, Footer } from '../../components/'
 import { HomeStyles } from './styles.home'
 
 export const Home = () => {
@@ -9,7 +9,7 @@ export const Home = () => {
       <div className='MainContainer'>
         <Hero />
         <Section />
-        <Cta />
+        <Footer />
       </div>
     </>
   )

@@ -2,7 +2,7 @@ import { createGlobalStyle, keyframes } from 'styled-components'
 
 const skeletonAnimation = keyframes`
   0% {
-    opacity: 0.3;
+    opacity: 0.2;
   }
 
   100% {
@@ -24,19 +24,25 @@ export const ModalStyles = createGlobalStyle`
     height: 100vh;
     background-color: #fff;
   }
-  
-  .modal {
+
+  .ModalContainer {
+    overflow-y: auto;
     position: fixed;
     top: 0%;
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: #fff;
-    padding: 0rem 4rem;
-    padding-bottom: 1rem;
-    margin-top: 3rem;
     z-index: 100;
+    width: 100%;
+    max-height: 100vh
+  }
+  
+  .modal {
+    background-color: #fff;
+    padding: 4rem 4rem;
+    z-index: 101;
     max-width: 100%;
     width: 100%;
+    height: auto;
   }
   
   .modal__wrapper {

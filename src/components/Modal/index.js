@@ -52,32 +52,37 @@ export const Modal = ({ show, onCloseModal }) => {
         <>
           <ModalStyles />
           <div className='overlay' onClick={onCloseModal} />
-          <div className='modal'>
-            <div className='modal__wrapper'>
-              <button className='modal__close-button' onClick={() => setShowModal(false)}>
-                <img src={CloseIcon} height='28' alt="" />
-              </button>
-              <div className='modal__side-menu'>
+          <div className='ModalContainer'>
+            <div className='modal'>
+              <div className='modal__wrapper'>
+                <button
+                  className='modal__close-button'
+                  onClick={() => setShowModal(false)}
+                >
+                  <img src={CloseIcon} height='28' alt='' />
+                </button>
+                <div className='modal__side-menu'>
+                  {loading ? (
+                    [1, 2, 3, 4, 5].map((e) => <SkeletonCrate key={e} />)
+                  ) : (
+                    <>
+                      {crates.map((e, i) => (
+                        <CrateCard
+                          data={e}
+                          key={i}
+                          onSelect={handleSelectCrate}
+                          selectedCrateId={selectedCrate.crate_id}
+                        />
+                      ))}
+                    </>
+                  )}
+                </div>
                 {loading ? (
-                  [1, 2, 3, 4, 5].map((e) => <SkeletonCrate key={e} />)
+                  <SkeletonMainCrate />
                 ) : (
-                  <>
-                    {crates.map((e, i) => (
-                      <CrateCard
-                        data={e}
-                        key={i}
-                        onSelect={handleSelectCrate}
-                        selectedCrateId={selectedCrate.crate_id}
-                      />
-                    ))}
-                  </>
+                  <MainCrate data={selectedCrate} />
                 )}
               </div>
-              {loading ? (
-                <SkeletonMainCrate />
-              ) : (
-                <MainCrate data={selectedCrate} />
-              )}
             </div>
           </div>
         </>
@@ -88,6 +93,10 @@ export const Modal = ({ show, onCloseModal }) => {
 
 const MainCrate = ({ data }) => {
   const [loadingImage, setLoadingImage] = useState(true)
+
+  useEffect(() => {
+    setLoadingImage(true)
+  }, [data])
 
   return (
     <>
@@ -104,15 +113,17 @@ const MainCrate = ({ data }) => {
           />
         </div>
         <div className='modal__content'>
-          <h1>{data.name}</h1>
+          <h1 className='modal__'>{data.name}</h1>
           <p>{data.description}</p>
           <div className='modal__tea-items'>
             {data.content.map((e) => (
-              <TeaItem data={e} />
+              <TeaItem selectedCrate={data} data={e} />
             ))}
           </div>
           <div className='modal__foter'>
-            <button className='TeaItem__button'><p>Sign up</p></button>
+            <button className='TeaItem__button'>
+              <p>Sign up</p>
+            </button>
           </div>
         </div>
       </div>
@@ -120,7 +131,7 @@ const MainCrate = ({ data }) => {
   )
 }
 
-const SkeletonMainCrate = ({ data }) => {
+const SkeletonMainCrate = () => {
   return (
     <div className='modal__main-crate--skeleton'>
       <div className='modal__header'>
@@ -133,15 +144,24 @@ const SkeletonMainCrate = ({ data }) => {
   )
 }
 
-const TeaItem = ({ data }) => {
+const TeaItem = ({ data, selectedCrate }) => {
   const [loadingImage, setLoadingImage] = useState(true)
+
+  useEffect(() => {
+    setLoadingImage(true)
+  }, [selectedCrate])
 
   return (
     <article className='TeaItem'>
       {loadingImage && (
         <div className='TeaItem__image TeaItem__image--skeleton'></div>
       )}
-      <img src={data.picture} style={{ display: loadingImage ? 'none' : 'block' }} onLoad={() => setLoadingImage(false)} className='TeaItem__image' />
+      <img
+        src={data.picture}
+        style={{ display: loadingImage ? 'none' : 'block' }}
+        onLoad={() => setLoadingImage(false)}
+        className='TeaItem__image'
+      />
       <h3 className='TeaItem__title'>{data.name}</h3>
       <p className='TeaItem__description'>{data.description}</p>
       <span className='TeaItem__rating'>

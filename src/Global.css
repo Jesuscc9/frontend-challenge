@@ -58,12 +58,9 @@ button {
   }
 }
 
-@media (max-width: 640px) {
-}
-
 @media (max-width: 768px) {
   :root {
-    --body-padding: 2rem;
+    --body-padding: 1rem;
   }
 }
 

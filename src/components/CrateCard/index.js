@@ -10,7 +10,7 @@ export const CrateCard = ({ data, onSelect, selectedCrateId }) => {
       className={`crate ${selectedCrateId === data.crate_id && 'crate--selected'
         }`}
       key={data.crate_id}
-      onClick={(e) => {
+      onClick={() => {
         onSelect(data.crate_id)
       }}
     >

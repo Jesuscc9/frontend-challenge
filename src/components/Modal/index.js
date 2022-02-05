@@ -22,6 +22,7 @@ export const Modal = ({ show, onCloseModal }) => {
         const crates = await api.getCrates()
         setCrates(crates)
         setSelecteCrate(crates[0])
+        setError(false)
       } catch (e) {
         console.error(e)
         setError(true)

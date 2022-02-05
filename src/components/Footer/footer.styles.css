@@ -4,11 +4,11 @@
 }
 
 .footer__info {
-  padding: calc(var(--body-padding) - 0.2rem) var(--body-padding);
-  background-color: #495664;
+  padding: 4rem;
+  background-color: var(--foter-bg-color);
   display: flex;
   flex-direction: column;
-  row-gap: 2.2rem;
+  row-gap: 2rem;
   color: #fff;
   width: 100%;
   flex: 1.2;
@@ -48,6 +48,8 @@
   width: 100%;
   object-fit: cover;
   opacity: 0.64;
+  max-height: 400px;
+  min-height: 100%;
 }
 
 @media (max-width: 768px) {

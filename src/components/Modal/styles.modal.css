@@ -63,7 +63,7 @@
 
 @media (max-width: 1220px) {
   .modal {
-    padding: 3rem 3rem;
+    padding: 3rem;
   }
 
   .modal__close-button {
@@ -78,12 +78,6 @@
 @media (max-width: 640px) {
   .modal {
     padding: 0rem;
-  }
-
-  .modal__close-button {
-    position: fixed;
-    top: 0px;
-    right: 0px;
   }
 
   .modal__wrapper {

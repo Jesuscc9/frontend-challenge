@@ -1,10 +1,13 @@
 .section {
   margin-top: 3.2rem;
-  padding: var(--body-padding);
+  padding: var(--body-padding) 0;
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   row-gap: 4.2rem;
+  max-width: 90%;
+  width: var(--max-sections-width);
+  margin: auto;
 }
 
 .section__title {
@@ -18,7 +21,7 @@
 .section__items-container {
   display: flex;
   justify-content: space-between;
-  gap: 3rem;
+  align-items: flex-start;
 }
 
 .item {
@@ -29,7 +32,6 @@
   row-gap: 1rem;
   width: 336px;
   max-width: 336px;
-  margin: 0 auto;
 }
 
 .item__header {
@@ -69,9 +71,11 @@
 @media (max-width: 1240px) {
   .item {
     width: auto;
+    margin: auto;
   }
 
   .section__items-container {
     flex-direction: column;
+    row-gap: 2rem;
   }
 }

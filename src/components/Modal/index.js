@@ -1,4 +1,4 @@
-import { ModalStyles } from './styles.modal'
+import './styles.modal.css'
 import { useState, useEffect, useRef } from 'react'
 import { api } from '../../services/api'
 import { CrateCard, SkeletonCrate } from '../CrateCard'
@@ -30,7 +30,10 @@ export const Modal = ({ show, onCloseModal }) => {
     }
 
     if (show === true) {
+      document.body.style.overflowY = 'hidden'
       fetchData()
+    } else {
+      document.body.style.overflowY = 'auto'
     }
   }, [show])
 
@@ -59,7 +62,6 @@ export const Modal = ({ show, onCloseModal }) => {
     <>
       {show && (
         <>
-          <ModalStyles />
           <div className='overlay' onClick={onCloseModal} />
           <div className='ModalContainer' ref={modalContainerRef}>
             <div className='modal'>
@@ -88,7 +90,6 @@ export const Modal = ({ show, onCloseModal }) => {
                               />
                             ))}
                           </>
-
                         )}
                       </>
                     )}

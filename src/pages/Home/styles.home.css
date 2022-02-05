@@ -1,0 +1,5 @@
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.6rem;
+}

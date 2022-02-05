@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { HeroStyles } from './styles.hero'
+import './styles.hero.css'
 import HeroImage from '../../assets/images/hero_tea_cup.jpg'
 import { Modal } from '../Modal'
 
@@ -8,7 +8,6 @@ export const Hero = () => {
 
   return (
     <>
-      <HeroStyles />
       <section className='hero'>
         <div className='hero__info'>
           <h1 className='hero__title'>Fullfill your most peculiar tea wishes.</h1>

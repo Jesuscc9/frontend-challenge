@@ -3,7 +3,7 @@ import { items } from '../../data/SectionsData'
 import { useState } from 'react'
 import ArrowIcon from '../../assets/icons/arrow.svg'
 
-export const Section = () => (
+export const WhyUsSection = () => (
   <>
     <SectionStyles />
     <section className='section'>

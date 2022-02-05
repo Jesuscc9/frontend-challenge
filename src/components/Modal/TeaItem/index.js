@@ -22,8 +22,10 @@ export const TeaItem = ({ data, selectedCrate }) => {
           onLoad={() => setLoadingImage(false)}
           className='TeaItem__image'
         />
-        <h3 className='TeaItem__title'>{data.name}</h3>
-        <p className='TeaItem__description'>{data.description}</p>
+        <div className="TeaItem__info">
+          <h3 className='TeaItem__title'>{data.name}</h3>
+          <p className='TeaItem__description'>{data.description}</p>
+        </div>
         <span className='TeaItem__rating'>
           <p>{data.rating}/5</p>
           <img src={StarIcon} width='16' />

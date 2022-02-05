@@ -9,7 +9,7 @@ export const CrateCard = ({ data, onSelect, selectedCrateId }) => {
   return (
     <>
       <CrateCardStyles />
-      <article className={`crate ${selectedCrateId === data.crate_id && 'crate--selected'}`} key={data.crate_id} onClick={() => {
+      <article className={`crate ${selectedCrateId === data.crate_id && 'crate--selected'}`} key={data.crate_id} onClick={(e) => {
         onSelect(data.crate_id)
       }} >
         {loadingImage && (

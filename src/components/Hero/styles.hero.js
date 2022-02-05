@@ -95,9 +95,13 @@ export const HeroStyles = createGlobalStyle`
       margin-bottom: 260px
     }
 
+    .hero__description {
+      font-size: 18px;
+    }
+
     .hero__info {
       text-align: center;
-      row-gap: 4rem;
+      row-gap: 3rem;
     }
 
     .hero__image-container {

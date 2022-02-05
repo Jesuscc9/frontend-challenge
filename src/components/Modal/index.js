@@ -1,5 +1,5 @@
 import { ModalStyles } from './styles.modal'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { api } from '../../services/api'
 import { CrateCard, SkeletonCrate } from '../CrateCard'
 import CloseIcon from '../../assets/icons/close-icon.svg'
@@ -9,7 +9,7 @@ export const Modal = ({ show, onCloseModal }) => {
   const [showModal, setShowModal] = useState(show)
   const [loading, setLoading] = useState(false)
   const [crates, setCrates] = useState([])
-  const [selectedCrate, setSelecteCrate] = useState(undefined)
+  const [selectedCrate, setSelecteCrate] = useState()
 
   useEffect(() => {
     setShowModal(show)
@@ -42,8 +42,12 @@ export const Modal = ({ show, onCloseModal }) => {
   }, [])
 
   const handleSelectCrate = (id) => {
+    // window.scrollY = 0;
+    modalContainerRef.current.scrollTo(0, 0)
     setSelecteCrate(crates.find((e) => e.crate_id === id))
   }
+
+  const modalContainerRef = useRef(null)
 
   return (
     <>
@@ -51,7 +55,7 @@ export const Modal = ({ show, onCloseModal }) => {
         <>
           <ModalStyles />
           <div className='overlay' onClick={onCloseModal} />
-          <div className='ModalContainer'>
+          <div className='ModalContainer' ref={modalContainerRef}>
             <div className='modal'>
               <div className='modal__wrapper'>
                 <button

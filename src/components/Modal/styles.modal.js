@@ -40,7 +40,7 @@ export const ModalStyles = createGlobalStyle`
     height: 100%;
     display: flex;
     flex-direction: row;
-    border-radius: 2.25rem !important;
+    border-radius: 2.25rem;
     overflow: hidden;
     box-shadow: 0px 4px 4px rgba(14, 56, 80, 0.25);
     position: relative;
@@ -67,4 +67,48 @@ export const ModalStyles = createGlobalStyle`
     background-color: #F7F8F9;
     padding: var(--body-padding);
   }
+
+  @media (max-width: 1220px) {
+    .modal {
+      padding: 3rem 3rem;
+    }
+
+    .modal__close-button {
+      top: 0px;
+    }
+
+    .modal__wrapper {
+      flex-direction: column-reverse;
+    }
+
+  }
+
+  @media (max-width: 640px) {
+    .modal {
+      padding: 0rem;
+    }
+
+    .modal__close-button {
+      position: fixed;
+      top: 0px;
+      right: 0px;
+    }
+
+    .modal__wrapper {
+      border-radius: 0;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .modal__side-menu {
+      padding: 3rem 2rem;
+      overflow-x: auto;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: stretch;
+      column-gap: 3rem;
+      width: 100%;
+    }
+  }
+
 `

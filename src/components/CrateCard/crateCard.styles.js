@@ -101,4 +101,31 @@ export const CrateCardStyles = createGlobalStyle`
 	.crate--skeleton .crate__text:last-child {
 		width: 30%;
 	}
+
+  @media (max-width: 750px) {
+    .crate {
+      flex-direction: column;
+      justify-content: start;
+      min-height: 100%;
+      min-width: 125px;
+      width: 125px;
+
+      &:hover {
+        transform: translate(0rem, 0rem)
+      }
+    }
+
+    .crate__image {
+      min-height: 110px;
+    }
+
+    .crate__info {
+      height: 100%;
+    }
+
+    .crate--selected .crate__info {
+      border: 1px solid rgba(255, 183, 0, 1);
+      border-top: 0;
+	  }
+  }
 `

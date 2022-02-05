@@ -89,4 +89,28 @@ export const MainCrateStyles = createGlobalStyle`
     display: flex;
     justify-content: space-around;
   }
+
+  @media (max-width: 750px) {
+    .MainCrate__tea-items {
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+
+    .MainCrate__title {
+      font-size: 46px;
+    }
+    
+    .MainCrate__description {
+      text-align: center;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .MainCrate__content {
+      padding: 1rem;
+    }
+  }
+
 `

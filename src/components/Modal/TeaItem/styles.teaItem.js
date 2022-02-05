@@ -78,4 +78,50 @@ export const TeaItemStyles = createGlobalStyle`
       margin-right: 0.6rem;
     }
   }
+
+  @media (max-width: 750px) {
+    .TeaItem {
+      flex-direction: row;
+      width: auto !important;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 1rem;
+    }
+
+    .TeaItem__image {
+      margin: 0;
+      width: 85px;
+      height: 85px;
+    }
+
+    .TeaItem__image--skeleton {
+      margin: 0;
+      min-height: 0;
+      width: 85px;
+      height: 85px;
+    }
+
+    .TeaItem__info {
+      display: flex;
+      row-gap: 0.6rem;
+      width: 200px;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .TeaItem {
+      column-gap: 0.5rem;
+    }
+
+    .TeaItem__image {
+      width: 55px;
+      height: 55px;
+    }
+
+    .TeaItem__image--skeleton {
+      width: 55px;
+      height: 55px;
+    }
+  }
 `

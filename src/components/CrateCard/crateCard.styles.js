@@ -52,25 +52,26 @@ export const CrateCardStyles = createGlobalStyle`
     padding: 1rem;
 		transition: border 0.4s;
 		border: 1px solid rgba(255, 255, 255, 0);
-		border-left: 0px;
+		border-left: 0;
+  }
 
-    h3 {
-      font-weight: 500;
-      font-size: 18px;
-      color: #24404F;
-      line-height: 36px;
-    }
+  .crate__title {
+    font-weight: 500;
+    font-size: 18px;
+    color: #24404F;
+    line-height: 36px;
+  }
 
-    span {
-      display: flex;
-      justify-content: end;
-    }
+  .crate__rating {
+    display: flex;
+    justify-content: end;
 
     p {
       font-weight: 300;
       font-size: 14px;
       line-height: 36px;
       color: #24404F;
+      margin-right: 0.4rem;
     }
   }
 
@@ -87,7 +88,6 @@ export const CrateCardStyles = createGlobalStyle`
 		flex-direction: column;
 		align-items: end;
 		row-gap: 0.6rem;
-
 	}
 	
 	.crate--skeleton .crate__text {

@@ -6,11 +6,11 @@ export const Home = () => {
   return (
     <>
       <HomeStyles />
-      <div className='MainContainer'>
+      <main className='MainContainer'>
         <Hero />
         <WhyUsSection />
         <Footer />
-      </div>
+      </main>
     </>
   )
 }

@@ -22,11 +22,11 @@ export const CrateCard = ({ data, onSelect, selectedCrateId }) => {
           onLoad={() => setLoadingImage(false)}
         />
         <div className='crate__info'>
-          <h3>{data.name}</h3>
-          <span>
+          <h3 className='crate__title'>{data.name}</h3>
+          <div className='crate__rating'>
             <p>{data.rating}/5</p>
             <img src={StarIcon} width='14' />
-          </span>
+          </div>
         </div>
       </article>
     </>

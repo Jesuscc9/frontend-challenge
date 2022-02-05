@@ -106,7 +106,7 @@ export const ModalStyles = createGlobalStyle`
       flex-direction: row;
       justify-content: flex-start;
       align-items: stretch;
-      column-gap: 3rem;
+      column-gap: 2rem;
       width: 100%;
     }
   }

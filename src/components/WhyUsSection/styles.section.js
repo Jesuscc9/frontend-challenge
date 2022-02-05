@@ -22,7 +22,6 @@ export const SectionStyles = createGlobalStyle`
     display: flex;
     justify-content: space-between;
     gap: 3rem;
-    flex-wrap: wrap;
   }
 
   .item {
@@ -32,6 +31,8 @@ export const SectionStyles = createGlobalStyle`
     flex-direction: column;
     row-gap: 1rem;
     width: 336px;
+    max-width: 336px;
+    margin: auto;
   }
 
   .item__header {
@@ -66,5 +67,16 @@ export const SectionStyles = createGlobalStyle`
     line-height: 24px;
     font-weight: 300;
     margin-top: 1rem;
+  }
+
+  @media (max-width: 1240px) {
+
+    .item {
+      width: auto;
+    }
+
+    .section__items-container {
+      flex-direction: column;
+    }
   }
 `

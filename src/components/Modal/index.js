@@ -4,10 +4,12 @@ import { api } from '../../services/api'
 import { CrateCard, SkeletonCrate } from '../CrateCard'
 import CloseIcon from '../../assets/icons/close-icon.svg'
 import { MainCrate, SkeletonMainCrate } from './MainCrate'
+import { ErrorMessage } from './ErrorMessage'
 
 export const Modal = ({ show, onCloseModal }) => {
   const [showModal, setShowModal] = useState(show)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
   const [crates, setCrates] = useState([])
   const [selectedCrate, setSelecteCrate] = useState()
 
@@ -16,9 +18,14 @@ export const Modal = ({ show, onCloseModal }) => {
     setLoading(true)
 
     const fetchData = async () => {
-      const crates = await api.getCrates()
-      setCrates(crates)
-      setSelecteCrate(crates[0])
+      try {
+        const crates = await api.getCrates()
+        setCrates(crates)
+        setSelecteCrate(crates[0])
+      } catch (e) {
+        console.error(e)
+        setError(true)
+      }
       setLoading(false)
     }
 
@@ -42,7 +49,6 @@ export const Modal = ({ show, onCloseModal }) => {
   }, [])
 
   const handleSelectCrate = (id) => {
-    // window.scrollY = 0;
     modalContainerRef.current.scrollTo(0, 0)
     setSelecteCrate(crates.find((e) => e.crate_id === id))
   }
@@ -64,26 +70,36 @@ export const Modal = ({ show, onCloseModal }) => {
                 >
                   <img src={CloseIcon} height='28' alt='' />
                 </button>
-                <div className='modal__side-menu'>
-                  {loading ? (
-                    [1, 2, 3, 4, 5].map((e) => <SkeletonCrate key={e} />)
-                  ) : (
+                {!error && (
+                  <aside className='modal__side-menu'>
                     <>
-                      {crates.map((e, i) => (
-                        <CrateCard
-                          key={i}
-                          data={e}
-                          onSelect={handleSelectCrate}
-                          selectedCrateId={selectedCrate.crate_id}
-                        />
-                      ))}
+                      {loading ? (
+                        [1, 2, 3, 4, 5].map((e) => <SkeletonCrate key={e} />)
+                      ) : (
+                        <>
+                          {crates.map((e, i) => (
+                            <CrateCard
+                              key={i}
+                              data={e}
+                              onSelect={handleSelectCrate}
+                              selectedCrateId={selectedCrate.crate_id}
+                            />
+                          ))}
+                        </>
+                      )}
                     </>
-                  )}
-                </div>
+                  </aside>
+                )}
                 {loading ? (
                   <SkeletonMainCrate />
                 ) : (
-                  <MainCrate data={selectedCrate} />
+                  <>
+                    {error ? (
+                      <ErrorMessage onBackClick={() => setShowModal(false)} />
+                    ) : (
+                      <MainCrate data={selectedCrate} />
+                    )}
+                  </>
                 )}
               </div>
             </div>

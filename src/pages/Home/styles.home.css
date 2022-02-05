@@ -1,5 +1,11 @@
 .MainContainer {
   display: flex;
   flex-direction: column;
-  row-gap: 3.3rem;
+  row-gap: 6rem;
+}
+
+@media (max-width: 1440px) {
+  .MainContainer {
+    row-gap: 3.3rem;
+  }
 }

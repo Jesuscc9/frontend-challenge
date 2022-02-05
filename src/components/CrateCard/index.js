@@ -1,6 +1,6 @@
 import './crateCard.styles.css'
 import StarIcon from '../../assets/icons/star.svg'
-import { useState } from 'react/cjs/react.development'
+import { useState } from 'react'
 
 export const CrateCard = ({ data, onSelect, selectedCrateId }) => {
   const [loadingImage, setLoadingImage] = useState(true)

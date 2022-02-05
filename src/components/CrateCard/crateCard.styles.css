@@ -34,7 +34,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   text-align: right;
   padding: 1rem;
   transition: border 0.4s;
@@ -51,7 +51,7 @@
 
 .crate__rating {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .crate__rating p {
@@ -73,7 +73,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
   row-gap: 0.6rem;
 }
 

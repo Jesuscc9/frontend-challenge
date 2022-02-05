@@ -22,9 +22,9 @@ export const Footer = () => {
         </div>
         <div className='footer__image-container'>
           {isMobile ? (
-            <img src={TeaMobile} alt='Tea image in TeaShop' className='footer__image' />
+            <img src={TeaMobile} alt='Tea image in TeaShop' className='footer__image' loading='lazy' />
           ) : (
-            <img src={TeaDesktop} alt='Tea image in TeaShop' className='footer__image' />
+            <img src={TeaDesktop} alt='Tea image in TeaShop' className='footer__image' loading='lazy' />
           )}
         </div>
       </footer>

@@ -70,26 +70,31 @@ export const Modal = ({ show, onCloseModal }) => {
                 >
                   <img src={CloseIcon} height='28' alt='' />
                 </button>
-                {!error && (
-                  <aside className='modal__side-menu'>
-                    <>
-                      {loading ? (
-                        [1, 2, 3, 4, 5].map((e) => <SkeletonCrate key={e} />)
-                      ) : (
-                        <>
-                          {crates.map((e, i) => (
-                            <CrateCard
-                              key={i}
-                              data={e}
-                              onSelect={handleSelectCrate}
-                              selectedCrateId={selectedCrate.crate_id}
-                            />
-                          ))}
-                        </>
-                      )}
-                    </>
-                  </aside>
-                )}
+
+                <aside className={`${!error && 'modal__side-menu'}`}>
+                  <>
+                    {loading ? (
+                      [1, 2, 3, 4, 5].map((e) => <SkeletonCrate key={e} />)
+                    ) : (
+                      <>
+                        {!error && (
+                          <>
+                            {crates.map((e, i) => (
+                              <CrateCard
+                                key={i}
+                                data={e}
+                                onSelect={handleSelectCrate}
+                                selectedCrateId={selectedCrate.crate_id}
+                              />
+                            ))}
+                          </>
+
+                        )}
+                      </>
+                    )}
+                  </>
+                </aside>
+
                 {loading ? (
                   <SkeletonMainCrate />
                 ) : (

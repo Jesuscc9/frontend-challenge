@@ -58,7 +58,7 @@
   }
 
   .footer__info {
-    padding: 4rem calc(var(--body-padding) - 1rem);
+    padding: 4rem 3rem;
     text-align: center;
   }
 

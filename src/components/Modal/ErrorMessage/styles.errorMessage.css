@@ -1,5 +1,5 @@
 .ErrorMessage {
-  padding: var(--body-padding);
+  padding: 4rem;
   text-align: center;
   width: 100%;
   display: flex;

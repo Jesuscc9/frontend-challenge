@@ -58,7 +58,7 @@
   align-items: center;
   row-gap: 2.2rem;
   background-color: #f7f8f9;
-  padding: var(--body-padding);
+  padding: 3rem;
 }
 
 @media (max-width: 1220px) {

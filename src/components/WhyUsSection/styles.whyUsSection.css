@@ -1,6 +1,6 @@
 .section {
   margin-top: 3.2rem;
-  padding: var(--body-padding) 0;
+  padding: 4rem 0;
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;

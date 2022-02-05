@@ -1,7 +1,7 @@
-import { createGlobalStyle, keyframes } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 export const ModalStyles = createGlobalStyle`
-  body{
+  body {
     overflow-y: hidden;
   }
 
@@ -13,6 +13,7 @@ export const ModalStyles = createGlobalStyle`
     width: 100vw;
     height: 100vh;
     background-color: #fff;
+    transition: opacity 0.3s;
   }
 
   .ModalContainer {

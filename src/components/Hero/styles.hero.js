@@ -16,7 +16,7 @@ export const HeroStyles = createGlobalStyle`
     flex-direction: column;
     justify-content: space-around;
     row-gap: 0rem;
-    padding: 2rem 0;
+    padding: 2.4rem 0;
   }
 
   .hero__title {
@@ -31,7 +31,7 @@ export const HeroStyles = createGlobalStyle`
 
   .hero__button {
     background-color: #fff;
-    padding: 0.6rem 3rem;
+    padding: 0.6rem 3.4rem;
     border: none;
     white-space: nowrap;
     width: min-content;
@@ -61,57 +61,37 @@ export const HeroStyles = createGlobalStyle`
     transform: translateY(70px);
   }
 
-
-  //Breakpoint where hero info and hero image do not fit together
   @media (max-width: 1320px) {
     .hero {
-      flex-direction: column;
+      padding-top: 3rem;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 60px;
+      text-align: center;
+      margin-bottom: 170px;
+    }
+
+    .hero__button {
+      margin: auto;
+    }
+
+    .hero__image {
+      transform: translateY(60px);
     }
 
     .hero__image-container {
-      justify-self: left;
-      margin-left: auto;
       height: 300px;
     }
 
-    .hero {
-      margin-bottom: 60px;
-    }
-    
-    .hero__image {
-      transform: translateY(-60px);
-    }
-
     .hero__info {
-      row-gap: 2rem;
+      row-gap: 3rem;
     }
-  }
-
-
-
-  @media (max-width: 1024px) {
-    .hero {
-      flex-direction: row;
-      justify-content: center;
-      row-gap: 6rem;
-      margin-bottom: 130px;
-    }
-
-    .hero__image-container {
-      justify-self: 0;
-      margin: 0;
-    }
-
-    .hero__image {
-      transform: translateY(-30px);
-    }
-
   }
 
   @media (max-width: 640px) {
     .hero {
       padding: 3rem 1.25rem 0rem 1.25rem;
-      row-gap: 4rem;
+      row-gap: 2rem;
       margin-bottom: 260px
     }
 
@@ -122,7 +102,7 @@ export const HeroStyles = createGlobalStyle`
 
     .hero__image-container {
       width: 100%;
-      height: 150px;
+      height: 140px;
     }
 
     .hero__image {

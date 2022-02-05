@@ -1,11 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const SectionStyles = createGlobalStyle`
-
   .section {
-    margin-top: 3rem;
+    margin-top: 3.2rem;
     padding: var(--body-padding);
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     row-gap: 4.2rem;
@@ -21,7 +20,7 @@ export const SectionStyles = createGlobalStyle`
   
   .section__items-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 3rem;
     flex-wrap: wrap;
   }
@@ -68,5 +67,4 @@ export const SectionStyles = createGlobalStyle`
     font-weight: 300;
     margin-top: 1rem;
   }
-
 `

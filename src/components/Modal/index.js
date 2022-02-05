@@ -1,7 +1,6 @@
 import { ModalStyles } from './styles.modal'
 import { useState, useEffect } from 'react'
 import { api } from '../../services/api'
-import { Loader } from '../'
 import { CrateCard, SkeletonCrate } from '../CrateCard'
 import CloseIcon from '../../assets/icons/close-icon.svg'
 import { MainCrate, SkeletonMainCrate } from './MainCrate'

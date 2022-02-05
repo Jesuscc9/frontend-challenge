@@ -7,7 +7,7 @@ export const FooterStyles = createGlobalStyle`
   }
 
   .footer__info {
-    padding: calc(var(--body-padding) + 0.5rem) var(--body-padding);
+    padding: calc(var(--body-padding) - 0.2rem) var(--body-padding);
     background-color: #495664;
     display: flex;
     flex-direction: column;

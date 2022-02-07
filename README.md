@@ -64,12 +64,12 @@ https://user-images.githubusercontent.com/42155516/152661948-2c28691a-32e1-4f2d-
 <br/>
 <strong>Success: </strong> In this case I only have to show the data to the user:
 <br />
-<img src="https://awesomescreenshot.s3.amazonaws.com/image/2541708/21614666-adf2ed79d654668f2c05cab047b0e434.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20220205%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220205T230846Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=ff3ff4127d216a5904a6cdc289d8b90e4d34bf73778e8a03de6507a69ea41cc4" width='800' />
+<img src="https://i.imgur.com/jPJgRtm.png" width='800' />
 <br/>
 <strong>Error: </strong>
 This is a simulation if the promise of the fetch is rejected, you have to indicate to the user that something is not working, and also a solution, in this case, try again later and a button to close the modal.
 <br/>
-<img src="https://awesomescreenshot.s3.amazonaws.com/image/2541708/21614690-7b1f202895ed53e69e4473e8cc7e3081.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20220205%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220205T231001Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=8598543d31ac058fc172f8c90a4bf74d6c325ac7f5cde38cfba85e279e3fd427" width='800' />
+<img src="https://i.imgur.com/Kucf6p0.png" width='800' />
 <br/>
 
 In the modal, I also had to make the design for the modal in smaller versions, so, I made a research on Dribble, and I also saw how other big platforms manage it, such as Amazon, MercadoLibre, Facebook, Microsoft Teams etc... I selected the best thing of each one and make my design.
